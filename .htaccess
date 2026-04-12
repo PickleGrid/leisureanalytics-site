@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Force HTTPS and WWW
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.leisureanalytics\.com\.au$ [NC]
+RewriteRule ^(.*)$ https://www.leisureanalytics.com.au/$1 [L,R=301]
+
+# Redirect index.html to root
+RewriteRule ^index\.html$ https://www.leisureanalytics.com.au/ [L,R=301]
