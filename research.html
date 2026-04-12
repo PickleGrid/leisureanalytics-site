@@ -1,0 +1,2361 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Essential Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Title -->
+  <title>Research | Leisure Analytics</title>
+
+  <!-- SEO -->
+  <meta name="description"
+    content="Leisure Analytics services and research â€” paid site analytical products plus free market insights for leisure-led assets across Australia.">
+  <meta name="keywords"
+    content="Leisure Analytics services, pickleball site analysis, feasibility report, location analysis, GIS mapping, forecasting, research, pickleball, wellness, gyms, cafes">
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico.png" type="image/x-icon">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+  <!-- CSS Framework -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- Plugin CSS (kept so your site bundle stays consistent) -->
+  <link rel="stylesheet" href="css/plugins/animate.css">
+  <link rel="stylesheet" href="css/plugins/slick.css">
+  <link rel="stylesheet" href="css/plugins/slick-theme.css">
+  <link rel="stylesheet" href="css/plugins/magnific-popup.css">
+
+  <!-- Icons -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Main Style -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+
+    /* Hero */
+    .research-hero {
+      min-height: 54vh;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.60), rgba(0,0,0,.60)),
+        url('img/blog-images/pickleball-site-analysis.jpg') center/cover no-repeat;
+      padding-top: 90px;
+    }
+    .research-hero h1 { font-weight: 800; letter-spacing: .2px; margin-bottom: 10px; }
+    .research-hero p { max-width: 880px; margin: 12px auto 0; opacity: .95; }
+
+    /* Tabs / Store wrapper */
+    .page-shell { padding: 26px 0 85px; }
+    .tabs-card {
+      margin-top: -34px;
+      position: relative;
+      z-index: 2;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.08);
+      padding: 16px;
+    }
+    .nav-pills .nav-link {
+      border-radius: 10px;
+      font-weight: 700;
+      padding: 12px 14px;
+      color: #222;
+      background: #f4f4f4;
+      margin-right: 10px;
+    }
+    .nav-pills .nav-link.active {
+      background: #183319;
+      color: #fff;
+    }
+
+    /* Service cards (store look) */
+    .store-header { padding: 22px 0 8px; }
+    .store-header h2 { font-weight: 900; margin-bottom: 8px; }
+    .store-header p { color: #4d4d4d; max-width: 920px; margin: 0 auto; }
+
+    .service-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,.08);
+      border: 1px solid rgba(0,0,0,.06);
+      height: 100%;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 35px rgba(0,0,0,.12);
+    }
+    .service-top {
+      padding: 18px 18px 10px;
+      border-bottom: 1px solid rgba(0,0,0,.06);
+    }
+    .service-title {
+      font-size: 16px;
+      font-weight: 900;
+      color: #111;
+      margin-bottom: 6px;
+    }
+    .service-sub {
+      font-size: 13.5px;
+      color: #4b4b4b;
+      line-height: 1.55;
+      margin-bottom: 0;
+    }
+    .service-price {
+      font-size: 22px;
+      font-weight: 900;
+      margin-top: 10px;
+      color: #183319;
+    }
+    .service-price small {
+      font-size: 12px;
+      font-weight: 700;
+      color: #666;
+      margin-left: 6px;
+    }
+    .service-body { padding: 14px 18px 16px; }
+    .service-list { list-style: none; padding-left: 0; margin: 0 0 14px; }
+    .service-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 13.5px;
+      color: #333;
+      padding: 7px 0;
+      border-bottom: 1px dashed rgba(0,0,0,.06);
+    }
+
+    .delivery-badge {
+      margin-top: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: .4px;
+      background: linear-gradient(135deg, #183319, #244a25);
+      color: #fff;
+      box-shadow: 0 6px 18px rgba(24,51,25,.25);
+    }
+    .delivery-badge i { font-size: 13px; }
+
+    .service-list li:last-child { border-bottom: none; }
+    .icon-ok { color: #28a745; margin-top: 2px; }
+    .icon-no { color: #999; margin-top: 2px; }
+
+    .service-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .btn-store {
+      border-radius: 10px;
+      font-weight: 800;
+      padding: 11px 14px;
+      border: 1px solid rgba(0,0,0,.10);
+    }
+    .btn-store.primary {
+      background: #183319;
+      border-color: #183319;
+      color: #fff;
+    }
+    .btn-store.primary:hover { opacity: .92; }
+
+    /* Chips */
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #f2f2f2;
+      font-size: 12px;
+      font-weight: 800;
+      color: #222;
+    }
+
+    /* Research toolbar */
+    .research-toolbar { margin-top: 18px; }
+    .toolbar-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.08);
+      padding: 18px;
+    }
+    .toolbar-card .form-control {
+      border-radius: 10px;
+      height: 48px;
+    }
+
+    /* Research tiles */
+    .research-grid { padding: 26px 0 0; }
+    .tile {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,.08);
+      transition: transform .18s ease, box-shadow .18s ease;
+      height: 100%;
+      cursor: pointer;
+      border: 1px solid rgba(0,0,0,.05);
+    }
+    .tile:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 35px rgba(0,0,0,.12);
+    }
+    .tile-media { height: 170px; background: #f4f4f4; position: relative; overflow: hidden; }
+    .tile-media img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.02); }
+    .tile-badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      background: rgba(0,0,0,.70);
+      color: #fff;
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .tile-body { padding: 16px 16px 14px; }
+    .tile-title { font-size: 16px; font-weight: 800; color: #1f1f1f; line-height: 1.35; margin-bottom: 8px; }
+    .tile-excerpt { font-size: 13.5px; color: #4b4b4b; line-height: 1.6; margin-bottom: 12px; min-height: 44px; }
+    .tile-meta {
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 12.5px; color: #6b6b6b;
+      gap: 10px; flex-wrap: wrap;
+    }
+    .tile-meta .readmore {
+      font-weight: 900; color: #222; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .tile-meta .readmore:hover { text-decoration: underline; }
+
+    /* Tag pills */
+    .pill {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #f2f2f2;
+      font-size: 12px;
+      color: #333;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+
+    .empty-state { padding: 40px 0 0; color: #666; }
+
+    .section-heading h2 { font-weight: 900; }
+    .section-heading p { max-width: 860px; margin: 10px auto 0; color: #4d4d4d; }
+
+    .note-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.08);
+      border: 1px solid rgba(0,0,0,.06);
+      padding: 14px 16px;
+    }
+    .note-card strong { font-weight: 900; }
+    .note-card p { margin: 0; color: #4d4d4d; font-size: 13.5px; }
+
+    /* ===================== ENA MODAL SHELL ===================== */
+    .ena-modal { display:none; position: fixed; inset: 0; z-index: 99999; }
+    .ena-modal.is-open { display:block; }
+    .ena-modal-backdrop {
+      position:absolute; inset:0;
+      background: rgba(0,0,0,.55);
+      backdrop-filter: blur(2px);
+    }
+    .ena-modal-panel {
+      position: relative;
+      max-width: 1100px;
+      margin: 22px auto;
+      padding: 0 14px;
+      z-index: 2;
+      max-height: calc(100vh - 44px);
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .ena-modal-close {
+      position: sticky;
+      top: 10px;
+      margin-left: auto;
+      display: block;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: none;
+      background: #fff;
+      font-size: 28px;
+      line-height: 42px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0,0,0,.18);
+      z-index: 3;
+    }
+
+    /* ============================================================
+       âœ… ENA FORM STYLES (COPIED FROM YOUR REFERENCE PAGE)
+    ============================================================ */
+    .ena-wrap { margin-top: 10px; }
+    .ena-card{
+      border-radius: 16px;
+      border: 1px solid rgba(0,0,0,.08);
+      box-shadow: 0 12px 30px rgba(0,0,0,.06);
+      overflow: hidden;
+      background: #fff;
+    }
+    .ena-head{
+      padding: 18px 18px;
+      background: linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.02));
+      border-bottom: 1px solid rgba(0,0,0,.06);
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .ena-head h3{
+      margin:0;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: .2px;
+      color:#1f1f1f;
+    }
+    .ena-progress{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      margin-top: 4px;
+      color:#6b6b6b;
+      font-size: 12px;
+      white-space:nowrap;
+    }
+    .ena-dot{
+      width: 9px;height: 9px;border-radius: 999px;
+      border: 1px solid rgba(0,0,0,.18);
+      background: rgba(0,0,0,.05);
+    }
+    .ena-dot.active{ background:#1f1f1f; border-color: rgba(0,0,0,.3); }
+
+    .ena-body{ padding: 18px; }
+    .ena-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 16px;
+    }
+    @media (max-width: 860px){ .ena-grid{grid-template-columns:1fr} }
+
+    .ena-section{
+      border: 1px solid rgba(0,0,0,.08);
+      background: #fafafa;
+      border-radius: 14px;
+      padding: 14px;
+    }
+    .ena-section h4{
+      margin:0 0 10px 0;
+      font-size: 14px;
+      font-weight: 800;
+      color:#1f1f1f;
+    }
+    .ena-row{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    @media (max-width: 620px){ .ena-row{grid-template-columns:1fr} }
+
+    .ena-label{
+      display:block;
+      font-size: 12px;
+      color:#666;
+      margin: 10px 0 6px;
+    }
+    .ena-input, .ena-select, .ena-textarea{
+      width:100%;
+      border:1px solid rgba(0,0,0,.12);
+      border-radius: 12px;
+      padding: 10px 11px;
+      background:#fff;
+      color:#111;
+      outline:none;
+      font-size: 14px;
+    }
+    .ena-textarea{min-height: 90px; resize: vertical;}
+    .ena-input:focus, .ena-select:focus, .ena-textarea:focus{
+      border-color: rgba(0,0,0,.35);
+      box-shadow: 0 0 0 3px rgba(0,0,0,.08);
+    }
+    .ena-hint{ font-size: 12px; color:#777; margin-top: 6px; line-height: 1.45; }
+
+    .ena-summary{
+      position: sticky;
+      top: 14px;
+    }
+    @media (max-width: 860px){ .ena-summary{position:static} }
+    .ena-kv{
+      display:grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      padding: 10px 0;
+      border-bottom: 1px dashed rgba(0,0,0,.16);
+      font-size: 13px;
+      color:#666;
+    }
+    .ena-kv:last-child{border-bottom:none}
+    .ena-kv strong{ color:#111; font-weight: 700; }
+
+    .ena-actions{
+      padding: 16px 18px;
+      border-top: 1px solid rgba(0,0,0,.06);
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      background: #fbfbfb;
+    }
+    .ena-btn{
+      border:none;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-weight: 800;
+      font-size: 14px;
+      cursor:pointer;
+    }
+    .ena-btn.primary{ background:#1f1f1f; color:#fff; }
+    .ena-btn.secondary{
+      background:#fff;
+      border: 1px solid rgba(0,0,0,.14);
+      color:#111;
+      font-weight: 700;
+    }
+    .ena-error{
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(217,162,156,.20);
+      border: 1px solid rgba(217,162,156,.55);
+      color:#111;
+      font-size: 13px;
+      display:none;
+    }
+    .ena-success{
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(46, 204, 113, .12);
+      border: 1px solid rgba(46, 204, 113, .45);
+      color:#111;
+      font-size: 13px;
+      display:none;
+    }
+
+    /* Address autocomplete dropdown */
+    .addr-wrap { position: relative; }
+    .addr-suggest {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(100% + 6px);
+      z-index: 9999;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.10);
+      overflow: hidden;
+      display: none;
+      max-height: 260px;
+      overflow-y: auto;
+    }
+    .addr-item {
+      padding: 10px 11px;
+      font-size: 14px;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(0,0,0,.06);
+    }
+    .addr-item:last-child { border-bottom: none; }
+    .addr-item:hover, .addr-item.active { background: rgba(0,0,0,.05); }
+    .addr-item small {
+      display:block;
+      color:#666;
+      font-size:12px;
+      margin-top:2px;
+      line-height:1.3;
+    }
+
+
+    /* Badge + button styling */
+
+
+.btn-sample {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn-sample:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* Modal shell */
+.sample-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+.sample-modal.is-open { display: block; }
+
+.sample-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.sample-modal__panel {
+  position: absolute;
+  inset: 4vh 4vw;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+}
+
+.sample-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.sample-modal__title {
+  font-weight: 800;
+  letter-spacing: -0.2px;
+}
+.sample-modal__subtitle {
+  font-weight: 600;
+  opacity: 0.65;
+  margin-left: 8px;
+  font-size: 0.92em;
+}
+
+.sample-modal__close {
+  border: 0;
+  background: transparent;
+  font-size: 18px;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+.sample-modal__close:hover {
+  background: rgba(0,0,0,0.06);
+}
+
+.sample-modal__body {
+  position: relative;
+  flex: 1;
+  background: #f6f7fb;
+}
+
+/* Viewer */
+.sample-viewer {
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+  padding: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.sample-viewer.scroll-locked {
+  overflow: hidden; /* lock scroll after one-page preview */
+}
+
+.sample-viewer__loading {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(0,0,0,0.08);
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 600;
+}
+
+.sample-viewer__canvas {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.10);
+  max-width: 100%;
+}
+
+/* CTA overlay */
+.sample-cta {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  background: rgba(0,0,0,0.45);
+}
+.sample-cta.is-visible { display: flex; }
+
+.sample-cta__card {
+  width: min(560px, 92vw);
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px 18px 16px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+}
+
+.sample-cta__kicker {
+  font-weight: 800;
+  font-size: 0.92rem;
+  opacity: 0.65;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.sample-cta__headline {
+  margin-top: 6px;
+  font-weight: 900;
+  font-size: 1.25rem;
+  letter-spacing: -0.3px;
+}
+
+.sample-cta__text {
+  margin-top: 8px;
+  opacity: 0.78;
+  line-height: 1.45;
+}
+
+.sample-cta__actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sample-cta__btn {
+  border-radius: 12px !important;
+  padding: 10px 14px !important;
+  font-weight: 700 !important;
+}
+
+/* prevent background scrolling while modal open */
+body.modal-open {
+  overflow: hidden;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <div class="se-pre-con"></div>
+
+  <!-- ======== Start Navbar ======== -->
+  <nav class="navbar navbar-expand-lg navbar-light nav-research fixed-top">
+    <div class="container">
+      <a href="index.html">
+        <img src="img/logo.png" style="height: 70px;" alt="Leisure Analytics logo">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="window.location.href='index.html#our-services'">Our Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="blog.html">Research</a>
+          </li>
+        </ul>
+
+        <a href="https://calendly.com/sam-leisureanalytics" class="btn-1">
+          <i aria-hidden="true" style="margin-right:6px; color:#28a745;"></i>Free Consultation
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!-- ======== End Navbar ======== -->
+
+  <!-- ======== Hero ======== -->
+  <section class="research-hero text-white">
+    <div class="container text-center">
+      <h1>Research</h1>
+      <p>
+        Paid analytical services and market updates.
+        Use the tabs to switch between services and articles.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======== Tabs Card ======== -->
+  <section>
+    <div class="container">
+      <div class="tabs-card">
+        <ul class="nav nav-pills" id="storeResearchTabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="services-tab" data-toggle="pill" href="#services" role="tab"
+              aria-controls="services" aria-selected="true">
+              <i class="fa fa-shopping-bag" aria-hidden="true"></i> Services (Paid)
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="research-tab" data-toggle="pill" href="#research" role="tab"
+              aria-controls="research" aria-selected="false">
+              <i class="fa fa-file-text-o" aria-hidden="true"></i> Research (Free)
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== Main Shell ======== -->
+  <section class="page-shell">
+    <div class="container">
+
+      <div class="tab-content" id="storeResearchTabsContent">
+
+        <!-- ===================== SERVICES TAB ===================== -->
+        <div class="tab-pane fade show active" id="services" role="tabpanel" aria-labelledby="services-tab">
+
+          <div class="store-header text-center">
+            <h2>Report Type</h2>
+            <div class="line m-auto"></div>
+          </div>
+
+          <div class="row mt-4">
+
+            <!-- BASIC -->
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="service-card">
+                <div class="service-top">
+                  <div class="service-title">Lite</div>
+                  <p class="service-sub">Fast, decision-ready demand snapshot for early screening.</p>
+                  <div class="service-price">$600 <small>AUD</small></div>
+                </div>
+                <div class="service-body">
+                  <ul class="service-list">
+                    <li><i class="fa fa-times-circle icon-no" aria-hidden="true"></i> Site Overview</li>
+                    <li><i class="fa fa-times-circle icon-no" aria-hidden="true"></i> Planning Framework</li>
+                    <li><i class="fa fa-times-circle icon-no" aria-hidden="true"></i> Supply Analysis</li>
+                    <li><i class="fa fa-times-circle icon-no" aria-hidden="true"></i> Proposed &amp; Approved Developments</li>
+                    <li><i class="fa fa-check-circle icon-ok" aria-hidden="true"></i> Trade Area Profile</li>
+                    <li><i class="fa fa-times-circle icon-no" aria-hidden="true"></i> Overall Market Potential</li>
+                    <li><i class="fa fa-times-circle icon-no" aria-hidden="true"></i> Membership Forecast</li>
+
+                    <div class="delivery-badge">
+                      <i class="fa fa-bolt" aria-hidden="true"></i>
+                      6-Hour Express Delivery
+                    </div>
+         
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- MARKET INSIGHTS -->
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="service-card">
+                <div class="service-top">
+                  <div class="service-title">Market Insights</div>
+                  <p class="service-sub">Adds competitive environment analysis and market conditions.</p>
+                  <div class="service-price">$850 <small>AUD</small></div>
+                </div>
+                <div class="service-body">
+                  <ul class="service-list">
+                    <li><i class="fa fa-times-circle icon-no" aria-hidden="true"></i> Site Overview</li>
+                    <li><i class="fa fa-times-circle icon-no" aria-hidden="true"></i> Planning Framework</li>
+                    <li><i class="fa fa-check-circle icon-ok" aria-hidden="true"></i> Supply Analysis</li>
+                    <li><i class="fa fa-times-circle icon-no" aria-hidden="true"></i> Proposed &amp; Approved Developments</li>
+                    <li><i class="fa fa-check-circle icon-ok" aria-hidden="true"></i> Trade Area Profile</li>
+                    <li><i class="fa fa-check-circle icon-ok" aria-hidden="true"></i> Overall Market Potential</li>
+                    <li><i class="fa fa-times-circle icon-no" aria-hidden="true"></i> Membership Forecast</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- SITE ANALYSIS -->
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="service-card">
+                <div class="service-top">
+                  <div class="service-title">Site Analytics</div>
+                  <p class="service-sub">End-to-end feasibility package.</p>
+                  <div class="service-price">Contact <small>for pricing</small></div>
+                </div>
+                <div class="service-body">
+                  <ul class="service-list">
+                    <li><i class="fa fa-check-circle icon-ok" aria-hidden="true"></i> Site Overview</li>
+                    <li><i class="fa fa-check-circle icon-ok" aria-hidden="true"></i> Planning Framework</li>
+                    <li><i class="fa fa-check-circle icon-ok" aria-hidden="true"></i> Supply Analysis</li>
+                    <li><i class="fa fa-check-circle icon-ok" aria-hidden="true"></i> Proposed &amp; Approved Developments</li>
+                    <li><i class="fa fa-check-circle icon-ok" aria-hidden="true"></i> Trade Area Profile</li>
+                    <li><i class="fa fa-check-circle icon-ok" aria-hidden="true"></i> Overall Market Potential</li>
+                    <li><i class="fa fa-times-circle icon-no" aria-hidden="true"></i> Membership Forecast</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- SITE ANALYTICS+ -->
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="service-card">
+                <div class="service-top">
+                  <div class="service-title">Site Analytics+</div>
+                  <p class="service-sub">Adds neural network membership forecasting.</p>
+                  <div class="service-price">Contact <small>for pricing</small></div>
+                </div>
+                <div class="service-body">
+                  <ul class="service-list">
+                    <li><i class="fa fa-check-circle icon-ok" aria-hidden="true"></i> Site Overview</li>
+                    <li><i class="fa fa-check-circle icon-ok" aria-hidden="true"></i> Planning Framework</li>
+                    <li><i class="fa fa-check-circle icon-ok" aria-hidden="true"></i> Supply Analysis</li>
+                    <li><i class="fa fa-check-circle icon-ok" aria-hidden="true"></i> Proposed &amp; Approved Developments</li>
+                    <li><i class="fa fa-check-circle icon-ok" aria-hidden="true"></i> Trade Area Profile</li>
+                    <li><i class="fa fa-check-circle icon-ok" aria-hidden="true"></i> Overall Market Potential</li>
+                    <li><i class="fa fa-check-circle icon-ok" aria-hidden="true"></i> Membership Forecast</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="note-card mt-2">
+            <p>
+              <strong>Tip:</strong> If youâ€™re still shortlisting sites, start with <strong>Lite</strong> or <strong>Market Insights</strong>.
+              If youâ€™re negotiating a lease / acquisition, use <strong>Site Analytics or Site Analytics+</strong>.
+            </p>
+          </div>
+
+         <div class="service-actions">
+  <a class="btn btn-store primary js-open-ena"
+     href="#"
+     data-report="Market Insights">
+    Order
+  </a>
+
+  <button type="button"
+          class="btn btn-sample"
+          id="btnViewSampleBasic">
+    <i class="fa fa-eye" aria-hidden="true"></i>
+    View sample
+  </button>
+</div>
+        </div>
+
+        <!-- ===================== RESEARCH TAB ===================== -->
+        <div class="tab-pane fade" id="research" role="tabpanel" aria-labelledby="research-tab">
+
+          <section class="research-toolbar">
+            <div class="toolbar-card">
+              <div class="row align-items-center">
+                <div class="col-lg-6 mb-3 mb-lg-0">
+                  <input id="searchInput" type="text" class="form-control"
+                    placeholder="Search researchâ€¦ (e.g. pickleball, feasibility, courts, demographics)">
+                </div>
+
+                <div class="col-lg-3 mb-3 mb-lg-0">
+                  <select id="categoryFilter" class="form-control">
+                    <option value="all">All categories</option>
+                    <option value="Sport Facilities">Sport Facilities</option>
+                    <option value="F&B">F&amp;B</option>
+                    <option value="Wellness">Wellness</option>
+                    <option value="GIS / Data">GIS / Data</option>
+                  </select>
+                </div>
+
+                <div class="col-lg-3">
+                  <select id="sortFilter" class="form-control">
+                    <option value="newest">Sort: newest</option>
+                    <option value="oldest">Sort: oldest</option>
+                    <option value="title-az">Sort: title Aâ€“Z</option>
+                    <option value="title-za">Sort: title Zâ€“A</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="research-grid">
+            <div class="section-heading text-center mb-4">
+              <h2>Latest posts</h2>
+              <div class="line m-auto"></div>
+              <p>Market notes and decision-ready insights for leisure-led assets.</p>
+            </div>
+
+            <div class="row" id="tilesContainer"></div>
+
+            <div id="emptyState" class="empty-state text-center d-none">
+              <h4>No matching posts</h4>
+              <p>Try a different search term or switch category.</p>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ENA MODAL POPUP ===================== -->
+  <div id="enaModal" class="ena-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Economic Needs Assessment request">
+    <div class="ena-modal-backdrop" data-ena-close></div>
+
+    <div class="ena-modal-panel" role="document">
+      <button type="button" class="ena-modal-close" aria-label="Close" data-ena-close>&times;</button>
+
+      <div class="ena-wrap" id="ena-request">
+        <div class="ena-card" role="region" aria-label="Economic Needs Assessment request form">
+          <div class="ena-head">
+            <div><h3>Request an Economic Needs Assessment</h3></div>
+            <div class="ena-progress">
+              <span class="ena-dot active" id="enaDot1"></span>
+              <span class="ena-dot" id="enaDot2"></span>
+              <span class="ena-dot" id="enaDot3"></span>
+              <span class="ena-dot" id="enaDot4"></span>
+              <span id="enaStepLabel">Step 1 of 4</span>
+            </div>
+          </div>
+
+          <form id="enaForm" action="https://formspree.io/f/xojlgyqn" method="POST" novalidate>
+            <!-- âœ… Stored for Formspree -->
+            <input type="hidden" id="assetType" name="assetType" value="" />
+            <input type="hidden" id="siteLat" name="siteLat" value="">
+            <input type="hidden" id="siteLng" name="siteLng" value="">
+            <input type="hidden" id="sitePlaceId" name="sitePlaceId" value="">
+            <input type="hidden" id="_subject" name="_subject" value="">
+            <input type="hidden" id="_replyto" name="_replyto" value="">
+            <textarea id="message" name="message" style="display:none;"></textarea>
+
+            <div class="ena-body">
+              <div class="ena-grid">
+                <div>
+                  <!-- STEP 1: ASSET TYPE + REPORT TYPE -->
+                  <div class="ena-section" data-ena-step="1">
+                    <h4>1) Asset &amp; Report Type</h4>
+
+                    <label class="ena-label" for="assetTypeSelect">Select your asset type</label>
+                    <select class="ena-select" id="assetTypeSelect" required>
+                      <option value="" selected disabled>Selectâ€¦</option>
+                      <option value="Pickleball/Padel">Pickleball/Padel</option>
+                      <option value="Wellness (Premium Gym/Bathhouse)">Wellness (Premium Gym/Bathhouse)</option>
+                      <option value="Experience F&B">Experience F&amp;B</option>
+                      <option value="Other">Other (e.g., Golf/F1 Simulator Lounge)</option>
+                    </select>
+
+                    <label class="ena-label" for="reportTypeStep1">Select report type</label>
+                    <!-- name="reportType" so Formspree captures it -->
+                    <select class="ena-select" id="reportTypeStep1" name="reportType" required>
+                      <option value="" selected disabled>Selectâ€¦</option>
+                      <option value="Lite">Lite</option>
+                      <option value="Market Insights">Market Insights</option>
+                      <option value="Site Analytics">Site Analytics</option>
+                      <option value="Site Analytics+">Site Analytics+</option>
+                    </select>
+
+                    <div class="ena-hint">
+                      Weâ€™ll tailor the next questions to match your asset type so the same form works across all services.
+                      <br><strong>Note:</strong> Lite / Market Insights will continue to payment (Stripe). Site Analytics tiers submit as a request.
+                    </div>
+                  </div>
+
+                  <!-- STEP 2: SITE BASICS -->
+                  <div class="ena-section" data-ena-step="2" style="display:none;">
+                    <h4>2) Site basics</h4>
+
+                    <label class="ena-label" for="address">Site address</label>
+                    <div class="addr-wrap">
+                      <input class="ena-input" id="address" name="address" type="text"
+                        placeholder="Start typing an addressâ€¦" autocomplete="off" required />
+                      <div class="addr-suggest" id="addrSuggest" role="listbox" aria-label="Address suggestions"></div>
+                    </div>
+
+                    <div class="ena-hint">Start typing and select the correct address from the list (AU results only).</div>
+
+                    <label class="ena-label" for="priorityWindow">Opening / decision timeframe</label>
+                    <select class="ena-select" id="priorityWindow" name="priorityWindow">
+                      <option value="" selected>Not sure yet</option>
+                      <option>0â€“3 months</option>
+                      <option>3â€“6 months</option>
+                      <option>6â€“12 months</option>
+                      <option>12+ months</option>
+                    </select>
+
+                    <label class="ena-label" for="notes">Anything else we should know?</label>
+                    <textarea class="ena-textarea" id="notes" name="notes"
+                      placeholder="E.g. target customer, pricing tier, constraints, operator partner, etc."></textarea>
+                  </div>
+
+                  <!-- STEP 3: PROPOSAL DETAILS (dynamic by asset type) -->
+                  <div class="ena-section" data-ena-step="3" style="display:none;">
+                    <h4>3) Proposal details</h4>
+
+                    <!-- PICKLEBALL / PADEL -->
+                    <div class="ena-proposal" data-proposal="Pickleball/Padel">
+                      <div class="ena-row">
+                        <div>
+                          <label class="ena-label" for="courtCount">Proposed number of courts</label>
+                          <input class="ena-input" id="courtCount" name="courtCount" type="number" min="0" step="1" placeholder="e.g. 8" />
+                        </div>
+                        <div>
+                          <label class="ena-label" for="venueType">Venue format</label>
+                          <select class="ena-select" id="venueType" name="venueType">
+                            <option value="" selected>Not specified</option>
+                            <option>Dedicated pickleball/padel</option>
+                            <option>Mixed-use (multi-sport)</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="ena-row">
+                        <div>
+                          <label class="ena-label" for="surface">Indoor / outdoor</label>
+                          <select class="ena-select" id="surface" name="surface">
+                            <option value="" selected>Not specified</option>
+                            <option>Indoor</option>
+                            <option>Outdoor</option>
+                            <option>Hybrid</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label class="ena-label" for="gfa">Proposed GFA (sqm) â€” if known</label>
+                          <input class="ena-input" id="gfa" name="gfa" type="number" min="0" step="1" placeholder="e.g. 1800" />
+                        </div>
+                      </div>
+
+                      <div class="ena-row">
+                        <div>
+                          <label class="ena-label" for="ancillary">Ancillary uses</label>
+                          <select class="ena-select" id="ancillary" name="ancillary">
+                            <option value="" selected>Not specified</option>
+                            <option>CafÃ© / bar</option>
+                            <option>Pro shop</option>
+                            <option>Gym / recovery</option>
+                            <option>Events / function space</option>
+                            <option>Multiple ancillary uses</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label class="ena-label" for="pricingTier">Pricing tier</label>
+                          <select class="ena-select" id="pricingTier" name="pricingTier">
+                            <option value="" selected>Not specified</option>
+                            <option>Value</option>
+                            <option>Mainstream</option>
+                            <option>Premium</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- WELLNESS -->
+                    <div class="ena-proposal" data-proposal="Wellness (Premium Gym/Bathhouse)" style="display:none;">
+                      <div class="ena-row">
+                        <div>
+                          <label class="ena-label" for="wellnessType">Wellness format</label>
+                          <select class="ena-select" id="wellnessType" name="wellnessType">
+                            <option value="" selected>Not specified</option>
+                            <option>Premium gym</option>
+                            <option>Bathhouse</option>
+                            <option>Hybrid (gym + bathing)</option>
+                            <option>Recovery studio</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label class="ena-label" for="wellnessGfa">Target GFA (sqm) â€” if known</label>
+                          <input class="ena-input" id="wellnessGfa" name="wellnessGfa" type="number" min="0" step="1" placeholder="e.g. 1200" />
+                        </div>
+                      </div>
+
+                      <div class="ena-row">
+                        <div>
+                          <label class="ena-label" for="membershipModel">Revenue model</label>
+                          <select class="ena-select" id="membershipModel" name="membershipModel">
+                            <option value="" selected>Not specified</option>
+                            <option>Membership</option>
+                            <option>Casual visits</option>
+                            <option>Hybrid</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label class="ena-label" for="wellnessTier">Positioning</label>
+                          <select class="ena-select" id="wellnessTier" name="wellnessTier">
+                            <option value="" selected>Not specified</option>
+                            <option>Premium</option>
+                            <option>Ultra-premium</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <label class="ena-label" for="keyAmenities">Key amenities</label>
+                      <select class="ena-select" id="keyAmenities" name="keyAmenities">
+                        <option value="" selected>Not specified</option>
+                        <option>Sauna</option>
+                        <option>Cold plunge</option>
+                        <option>Steam</option>
+                        <option>Pool</option>
+                        <option>Treatment rooms</option>
+                        <option>Multiple amenities</option>
+                      </select>
+                    </div>
+
+                    <!-- EXPERIENCE F&B -->
+                    <div class="ena-proposal" data-proposal="Experience F&B" style="display:none;">
+                      <div class="ena-row">
+                        <div>
+                          <label class="ena-label" for="fbType">Concept type</label>
+                          <select class="ena-select" id="fbType" name="fbType">
+                            <option value="" selected>Not specified</option>
+                            <option>CafÃ©</option>
+                            <option>Restaurant</option>
+                            <option>Bar / nightlife</option>
+                            <option>Quick service</option>
+                            <option>Experiential venue (games/entertainment)</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label class="ena-label" for="fbSeats">Target seats (if known)</label>
+                          <input class="ena-input" id="fbSeats" name="fbSeats" type="number" min="0" step="1" placeholder="e.g. 80" />
+                        </div>
+                      </div>
+
+                      <div class="ena-row">
+                        <div>
+                          <label class="ena-label" for="fbGfa">Target GFA (sqm) â€” if known</label>
+                          <input class="ena-input" id="fbGfa" name="fbGfa" type="number" min="0" step="1" placeholder="e.g. 250" />
+                        </div>
+                        <div>
+                          <label class="ena-label" for="fbTrading">Trading profile</label>
+                          <select class="ena-select" id="fbTrading" name="fbTrading">
+                            <option value="" selected>Not specified</option>
+                            <option>Breakfast / daytime</option>
+                            <option>Lunch / dinner</option>
+                            <option>Late night</option>
+                            <option>All day</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <label class="ena-label" for="fbPositioning">Positioning</label>
+                      <select class="ena-select" id="fbPositioning" name="fbPositioning">
+                        <option value="" selected>Not specified</option>
+                        <option>Value</option>
+                        <option>Mainstream</option>
+                        <option>Premium</option>
+                        <option>Iconic destination</option>
+                      </select>
+                    </div>
+
+                    <!-- OTHER -->
+                    <div class="ena-proposal" data-proposal="Other" style="display:none;">
+                      <label class="ena-label" for="otherConcept">Describe the concept</label>
+                      <input class="ena-input" id="otherConcept" name="otherConcept" type="text" placeholder="e.g. Golf simulator lounge, climbing gym, mini-golf, etc." />
+
+                      <div class="ena-row">
+                        <div>
+                          <label class="ena-label" for="otherGfa">Target GFA (sqm) â€” if known</label>
+                          <input class="ena-input" id="otherGfa" name="otherGfa" type="number" min="0" step="1" placeholder="e.g. 600" />
+                        </div>
+                        <div>
+                          <label class="ena-label" for="otherModel">Revenue model</label>
+                          <select class="ena-select" id="otherModel" name="otherModel">
+                            <option value="" selected>Not specified</option>
+                            <option>Membership</option>
+                            <option>Pay-per-use</option>
+                            <option>Events / functions</option>
+                            <option>Hybrid</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- STEP 4 -->
+                  <div class="ena-section" data-ena-step="4" style="display:none;">
+                    <h4>4) Contact details</h4>
+
+                    <!-- Hidden reportType select kept for compatibility (synced in JS) -->
+                    <select id="reportType" name="reportType" style="display:none;">
+                      <option value="" selected></option>
+                      <option>Lite</option>
+                      <option>Market Insights</option>
+                      <option>Site Analytics</option>
+                      <option>Site Analytics+</option>
+                    </select>
+
+                    <label class="ena-label" for="clientType">Who are you?</label>
+                    <select class="ena-select" id="clientType" name="clientType" required>
+                      <option value="" selected disabled>Selectâ€¦</option>
+                      <option>Club / operator</option>
+                      <option>Property developer</option>
+                      <option>Investor</option>
+                      <option>Lender / broker</option>
+                      <option>Franchisor / network</option>
+                      <option>Other</option>
+                    </select>
+
+                    <label class="ena-label" for="email">Email for delivery</label>
+                    <input class="ena-input" id="email" name="email" type="email" placeholder="name@email.com" required />
+
+                    <label class="ena-label" for="company">Company (optional)</label>
+                    <input class="ena-input" id="company" name="company" type="text" placeholder="Your company / entity name" />
+                  </div>
+
+                  <div class="ena-error" id="enaErrorBox"></div>
+                  <div class="ena-success" id="enaSuccessBox">Weâ€™ve received your submission and will be in touch shortly.</div>
+                </div>
+
+                <!-- SUMMARY -->
+                <aside class="ena-section ena-summary" aria-label="Summary">
+                  <h4 style="margin-bottom:10px;">Summary</h4>
+                  <div class="ena-kv"><span>Asset</span><strong id="sumAsset">â€”</strong></div>
+                  <div class="ena-kv"><span>Address</span><strong id="sumAddress">â€”</strong></div>
+                  <div class="ena-kv"><span>Report Type</span><strong id="sumReportType">â€”</strong></div>
+                  <div class="ena-kv"><span>Proposal</span><strong id="sumProposal">â€”</strong></div>
+                  <div class="ena-kv"><span>Delivery email</span><strong id="sumEmail">â€”</strong></div>
+                </aside>
+              </div>
+            </div>
+
+            <div class="ena-actions">
+              <button type="button" class="ena-btn secondary" id="enaBackBtn">Back</button>
+              <button type="button" class="ena-btn primary" id="enaNextBtn">Next</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- =================== END ENA MODAL =================== -->
+
+  <!-- ======== Footer ======== -->
+  <footer class="footer">
+    <div class="container text-center">
+      <div class="content">
+        <a href="index.html">
+          <img src="img/Footer-logo.svg" alt="Logo" style="height: 46px; width: 50px;">
+        </a>
+        <p>Â© 2025 Leisure Analytics</p>
+
+        <div class="footer-links">
+          <a class="nav-link small-link" href="privacy-policy.html">Privacy Policy</a>
+          <span class="dot">â€¢</span>
+          <a class="nav-link small-link" href="terms.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======== Java Script ======== -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/plugins/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/plugins/slick.min.js"></script>
+  <script src="js/plugins/wow.min.js"></script>
+  <script src="js/plugins/magnific-popup.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- ======== Research Tiles Logic ======== -->
+  <script>
+    const POSTS = [
+      {
+        title: "Nearly 70% of QLD facilities now open with 3+ courts",
+        excerpt: "What venue sizing trends imply for feasibility, peak-time capacity and site selection risk.",
+        category: "Sport Facilities",
+        tags: ["Sizing", "Feasibility", "QLD"],
+        date: "2026-01-04",
+        url: "qld-facilities-3plus-courts.html",
+        image: "img/blog-images/feasible-pickleball.jpeg",
+        readTime: "2 min read"
+      },
+      {
+        title: "Venue type mix: dedicated vs repurposed facilities",
+        excerpt: "Why dedicated venues are likely to rise as growth accelerates, reshaping the market share of repurposed sites.",
+        category: "Sport Facilities",
+        tags: ["Supply Mix", "Trend", "Strategy"],
+        date: "2026-01-04",
+        url: "pickleball-facility-type-qld.html",
+        image: "img/blog-images/repurpose-for-pickleball.jpeg",
+        readTime: "2 min read"
+      },
+      {
+        title: "Planning & zoning delays create clustered openings",
+        excerpt: "A practical look at how approvals compress supply into bursts â€” and what that means for timing feasibility.",
+        category: "Sport Facilities",
+        tags: ["Planning", "Zoning", "Timing"],
+        date: "2026-01-04",
+        url: "qld-pickleball-venue-openings-by-year.html",
+        image: "img/blog-images/the-picklr-expansion.jpg",
+        readTime: "2 min read"
+      },
+      {
+        title: "Pickleball Site Potential Report",
+        excerpt: "A feasibility report covering catchment size, demographic demand drivers, service level benchmarks, competitive impacts, and market potential.",
+        category: "Sport Facilities",
+        tags: ["Pickleball Site", "Analysis", "Research"],
+        date: "2026-02-10",
+        url: "pickleball-site-advisory-research.html",
+        image: "img/blog-images/pickleball-site-analysis.jpg",
+        readTime: "2 min read"
+      }
+    ];
+
+    const tilesContainer = document.getElementById("tilesContainer");
+    const emptyState = document.getElementById("emptyState");
+    const searchInput = document.getElementById("searchInput");
+    const categoryFilter = document.getElementById("categoryFilter");
+    const sortFilter = document.getElementById("sortFilter");
+
+    function formatDate(dateStr) {
+      const d = new Date(dateStr + "T00:00:00");
+      return d.toLocaleDateString(undefined, { day: "2-digit", month: "short", year: "numeric" });
+    }
+
+    function postMatches(post, q, category) {
+      const query = (q || "").trim().toLowerCase();
+      const inCategory = (category === "all") || (post.category === category);
+      if (!query) return inCategory;
+
+      const haystack = [post.title, post.excerpt, post.category, (post.tags || []).join(" ")].join(" ").toLowerCase();
+      return inCategory && haystack.includes(query);
+    }
+
+    function sortPosts(list, sortMode) {
+      const posts = [...list];
+      if (sortMode === "newest") posts.sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+      if (sortMode === "oldest") posts.sort((a, b) => (a.date || "").localeCompare(b.date || ""));
+      if (sortMode === "title-az") posts.sort((a, b) => (a.title || "").localeCompare(b.title || ""));
+      if (sortMode === "title-za") posts.sort((a, b) => (b.title || "").localeCompare(a.title || ""));
+      return posts;
+    }
+
+    function renderTiles() {
+      if (!tilesContainer) return;
+      const q = searchInput ? searchInput.value : "";
+      const category = categoryFilter ? categoryFilter.value : "all";
+      const sortMode = sortFilter ? sortFilter.value : "newest";
+
+      const filtered = POSTS.filter(p => postMatches(p, q, category));
+      const sorted = sortPosts(filtered, sortMode);
+
+      tilesContainer.innerHTML = "";
+
+      if (!sorted.length) {
+        emptyState && emptyState.classList.remove("d-none");
+        return;
+      }
+      emptyState && emptyState.classList.add("d-none");
+
+      sorted.forEach(post => {
+        const col = document.createElement("div");
+        col.className = "col-md-6 col-lg-4 mb-4";
+
+        const tagsHtml = (post.tags || []).slice(0, 3).map(t => `<span class="pill">${t}</span>`).join("");
+
+        col.innerHTML = `
+          <div class="tile" role="link" tabindex="0" aria-label="Open: ${post.title}">
+            <div class="tile-media">
+              <img src="${post.image}" alt="${post.title}">
+              <div class="tile-badge">
+                <i class="fa fa-folder-open-o" aria-hidden="true"></i>
+                ${post.category}
+              </div>
+            </div>
+            <div class="tile-body">
+              <div class="tile-title">${post.title}</div>
+              <div class="tile-excerpt">${post.excerpt}</div>
+              <div class="mb-2">${tagsHtml}</div>
+              <div class="tile-meta">
+                <span><i class="fa fa-calendar-o" aria-hidden="true"></i> ${formatDate(post.date)}</span>
+                <a class="readmore" href="${post.url}">
+                  Read <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        `;
+
+        const tile = col.querySelector(".tile");
+        tile.addEventListener("click", () => window.location.href = post.url);
+        tile.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") window.location.href = post.url;
+        });
+
+        tilesContainer.appendChild(col);
+      });
+    }
+
+    renderTiles();
+    if (searchInput) searchInput.addEventListener("input", renderTiles);
+    if (categoryFilter) categoryFilter.addEventListener("change", renderTiles);
+    if (sortFilter) sortFilter.addEventListener("change", renderTiles);
+
+    $('#research-tab').on('shown.bs.tab', function () { renderTiles(); });
+  </script>
+
+  <!-- ======== ENA SCRIPT (4-step stepper + dynamic proposal + Formspree + Mapbox + Stripe redirect for paid tiers) ======== -->
+  <script>
+    const enaForm = document.getElementById("enaForm");
+    const enaSteps = [...document.querySelectorAll("[data-ena-step]")];
+    const enaStepLabel = document.getElementById("enaStepLabel");
+    const enaDot1 = document.getElementById("enaDot1");
+    const enaDot2 = document.getElementById("enaDot2");
+    const enaDot3 = document.getElementById("enaDot3");
+    const enaDot4 = document.getElementById("enaDot4");
+    const enaErrorBox = document.getElementById("enaErrorBox");
+    const enaSuccessBox = document.getElementById("enaSuccessBox");
+    const enaBackBtn = document.getElementById("enaBackBtn");
+    const enaNextBtn = document.getElementById("enaNextBtn");
+    const assetTypeSelect = document.getElementById("assetTypeSelect");
+
+    // Step 1 report type (source of truth)
+    const reportTypeStep1 = document.getElementById("reportTypeStep1");
+
+    // ===================== STRIPE SETTINGS (EDIT THESE) =====================
+    // Put your Stripe Payment Link / Checkout URLs here
+    const STRIPE_CHECKOUT_URLS = {
+      "Lite": "https://buy.stripe.com/7sY7sK60x0PhdsH5jO1B600",
+      "Market Insights": "https://buy.stripe.com/8x28wOfB7apR60f6nS1B601"
+    };
+
+    function isStripeTier(reportType){
+      return reportType === "Lite" || reportType === "Market Insights";
+    }
+    // =======================================================================
+
+    let enaStep = 1;
+
+    function enaSetStep(n){
+      enaStep = n;
+
+      enaSteps.forEach(s => {
+        s.style.display = (Number(s.dataset.enaStep) === enaStep) ? "block" : "none";
+      });
+
+      enaDot1 && enaDot1.classList.toggle("active", enaStep >= 1);
+      enaDot2 && enaDot2.classList.toggle("active", enaStep >= 2);
+      enaDot3 && enaDot3.classList.toggle("active", enaStep >= 3);
+      enaDot4 && enaDot4.classList.toggle("active", enaStep >= 4);
+
+      if (enaStepLabel) enaStepLabel.textContent = `Step ${enaStep} of 4`;
+
+      enaBackBtn.style.visibility = (enaStep === 1) ? "hidden" : "visible";
+
+      if (enaStep === 4){
+        const rt = getSelectedReportType();
+        enaNextBtn.textContent = isStripeTier(rt) ? "Continue to payment" : "Submit request";
+      } else {
+        enaNextBtn.textContent = "Next";
+      }
+
+      enaHideError();
+      hideSuccess();
+      enaUpdateSummary();
+    }
+
+    function enaShowError(msg){
+      enaErrorBox.textContent = msg;
+      enaErrorBox.style.display = "block";
+      enaErrorBox.scrollIntoView({behavior:"smooth", block:"nearest"});
+    }
+    function enaHideError(){ enaErrorBox.style.display = "none"; enaErrorBox.textContent = ""; }
+    function showSuccess(){ enaSuccessBox.style.display = "block"; }
+    function hideSuccess(){ enaSuccessBox.style.display = "none"; }
+
+    function v(id){
+      const el = document.getElementById(id);
+      return (el ? el.value : "").trim();
+    }
+    function setHidden(id, val){
+      const el = document.getElementById(id);
+      if (el) el.value = val ?? "";
+    }
+
+    function getSelectedAssetType(){
+      return v("assetTypeSelect");
+    }
+
+    function getSelectedReportType(){
+      const rt1 = (reportTypeStep1 ? reportTypeStep1.value : "").trim();
+      if (rt1) return rt1;
+      return v("reportType");
+    }
+
+    function syncHiddenReportType(){
+      const hiddenRt = document.getElementById("reportType");
+      const rt = getSelectedReportType();
+      if (hiddenRt) hiddenRt.value = rt || "";
+    }
+
+    function applyAssetType(){
+      const chosen = getSelectedAssetType();
+
+      // Persist into hidden field for Formspree
+      setHidden("assetType", chosen);
+
+      // Toggle proposal blocks and disable hidden block inputs so they don't submit noise
+      const blocks = [...document.querySelectorAll(".ena-proposal[data-proposal]")];
+      blocks.forEach(b => {
+        const match = b.getAttribute("data-proposal") === chosen;
+        b.style.display = match ? "block" : "none";
+
+        const inputs = [...b.querySelectorAll("input, select, textarea")];
+        inputs.forEach(i => i.disabled = !match);
+      });
+
+      enaUpdateSummary();
+    }
+
+    function proposalText(){
+      const asset = getSelectedAssetType();
+
+      if (asset === "Pickleball/Padel"){
+        const courts = v("courtCount");
+        const venueType = v("venueType");
+        const surface = v("surface");
+        const gfa = v("gfa");
+        const parts = [];
+        if (courts) parts.push(`${courts} courts`);
+        if (venueType) parts.push(venueType);
+        if (surface) parts.push(surface);
+        if (gfa) parts.push(`${gfa} sqm GFA`);
+        return parts.length ? parts.join(" â€¢ ") : "â€”";
+      }
+
+      if (asset === "Wellness (Premium Gym/Bathhouse)"){
+        const t = v("wellnessType");
+        const g = v("wellnessGfa");
+        const m = v("membershipModel");
+        const tier = v("wellnessTier");
+        const am = v("keyAmenities");
+        const parts = [];
+        if (t) parts.push(t);
+        if (g) parts.push(`${g} sqm`);
+        if (m) parts.push(m);
+        if (tier) parts.push(tier);
+        if (am) parts.push(am);
+        return parts.length ? parts.join(" â€¢ ") : "â€”";
+      }
+
+      if (asset === "Experience F&B"){
+        const t = v("fbType");
+        const s = v("fbSeats");
+        const g = v("fbGfa");
+        const tr = v("fbTrading");
+        const p = v("fbPositioning");
+        const parts = [];
+        if (t) parts.push(t);
+        if (s) parts.push(`${s} seats`);
+        if (g) parts.push(`${g} sqm`);
+        if (tr) parts.push(tr);
+        if (p) parts.push(p);
+        return parts.length ? parts.join(" â€¢ ") : "â€”";
+      }
+
+      if (asset === "Other"){
+        const c = v("otherConcept");
+        const g = v("otherGfa");
+        const m = v("otherModel");
+        const parts = [];
+        if (c) parts.push(c);
+        if (g) parts.push(`${g} sqm`);
+        if (m) parts.push(m);
+        return parts.length ? parts.join(" â€¢ ") : "â€”";
+      }
+
+      return "â€”";
+    }
+
+    function enaUpdateSummary(){
+      const sumAsset = document.getElementById("sumAsset");
+      const sumAddress = document.getElementById("sumAddress");
+      const sumReportType = document.getElementById("sumReportType");
+      const sumProposal = document.getElementById("sumProposal");
+      const sumEmail = document.getElementById("sumEmail");
+
+      if (sumAsset) sumAsset.textContent = getSelectedAssetType() || "â€”";
+      if (sumAddress) sumAddress.textContent = v("address") || "â€”";
+      if (sumReportType) sumReportType.textContent = getSelectedReportType() || "â€”";
+      if (sumProposal) sumProposal.textContent = proposalText();
+      if (sumEmail) sumEmail.textContent = v("email") || "â€”";
+
+      syncHiddenReportType();
+
+      // Update Step 4 button label live
+      if (enaStep === 4){
+        const rt = getSelectedReportType();
+        enaNextBtn.textContent = isStripeTier(rt) ? "Continue to payment" : "Submit request";
+      }
+    }
+
+    function validateStep1(){
+      if (!getSelectedAssetType()) return "Please select an asset type to continue.";
+      if (!getSelectedReportType()) return "Please select a report type (Lite, Market Insights, Site Analytics, or Site Analytics+).";
+      return null;
+    }
+
+    function validateStep2(){
+      if (!v("address")) return "Please enter the site address.";
+      return null;
+    }
+
+    function validateStep4(){
+      const clientType = v("clientType");
+      const emailEl = document.getElementById("email");
+      const email = (emailEl?.value || "").trim();
+
+      if (!getSelectedReportType()) return "Please select a report type.";
+      if (!clientType) return "Please select who you are (operator, developer, investor, etc.).";
+      if (!email) return "Please enter an email for delivery.";
+      if (emailEl && !emailEl.checkValidity()) return "Please enter a valid email address.";
+      if (emailEl) emailEl.value = email;
+
+      return null;
+    }
+
+    function payloadToPrettyText(payload){
+      const order = [
+        ["Asset Type", payload.assetType],
+        ["Report Type", payload.reportType],
+        ["Site Address", payload.address],
+        ["Site Lat", payload.siteLat],
+        ["Site Lng", payload.siteLng],
+        ["Place ID", payload.sitePlaceId],
+        ["Opening / decision timeframe", payload.priorityWindow],
+        ["Proposal summary", payload.proposalSummary],
+
+        ["Proposed number of courts", payload.courtCount],
+        ["Venue format", payload.venueType],
+        ["Indoor / outdoor", payload.surface],
+        ["Proposed GFA (sqm)", payload.gfa],
+
+        ["Wellness format", payload.wellnessType],
+        ["Wellness GFA (sqm)", payload.wellnessGfa],
+        ["Revenue model", payload.membershipModel],
+        ["Wellness positioning", payload.wellnessTier],
+        ["Key amenities", payload.keyAmenities],
+
+        ["F&B concept", payload.fbType],
+        ["Seats", payload.fbSeats],
+        ["F&B GFA (sqm)", payload.fbGfa],
+        ["Trading profile", payload.fbTrading],
+        ["F&B positioning", payload.fbPositioning],
+
+        ["Other concept", payload.otherConcept],
+        ["Other GFA (sqm)", payload.otherGfa],
+        ["Other revenue model", payload.otherModel],
+
+        ["Client type", payload.clientType],
+        ["Delivery email", payload.email],
+        ["Company", payload.company],
+        ["Notes", payload.notes],
+        ["Submitted (Brisbane)", payload.submittedBrisbane]
+      ];
+
+      return order
+        .filter(([,val]) => val !== "" && val !== null && typeof val !== "undefined")
+        .map(([k,val]) => `${k}: ${val}`)
+        .join("\n");
+    }
+
+    function collectPayload(){
+      const assetType = getSelectedAssetType();
+
+      return {
+        assetType,
+        reportType: getSelectedReportType(),
+        address: v("address"),
+        siteLat: v("siteLat"),
+        siteLng: v("siteLng"),
+        sitePlaceId: v("sitePlaceId"),
+        priorityWindow: v("priorityWindow"),
+
+        proposalSummary: proposalText(),
+
+        courtCount: v("courtCount"),
+        venueType: v("venueType"),
+        surface: v("surface"),
+        gfa: v("gfa"),
+
+        wellnessType: v("wellnessType"),
+        wellnessGfa: v("wellnessGfa"),
+        membershipModel: v("membershipModel"),
+        wellnessTier: v("wellnessTier"),
+        keyAmenities: v("keyAmenities"),
+
+        fbType: v("fbType"),
+        fbSeats: v("fbSeats"),
+        fbGfa: v("fbGfa"),
+        fbTrading: v("fbTrading"),
+        fbPositioning: v("fbPositioning"),
+
+        otherConcept: v("otherConcept"),
+        otherGfa: v("otherGfa"),
+        otherModel: v("otherModel"),
+
+        clientType: v("clientType"),
+        email: v("email"),
+        company: v("company"),
+        notes: v("notes"),
+        submittedBrisbane: new Date().toLocaleString("en-AU", { timeZone: "Australia/Brisbane" })
+      };
+    }
+
+    async function submitToFormspreeThenRedirect(payload, redirectUrl){
+      // Build FormData as if the form was submitted normally (so Formspree receives it)
+      const fd = new FormData(enaForm);
+
+      // Ensure the fields we set in JS are present
+      fd.set("assetType", payload.assetType || "");
+      fd.set("reportType", payload.reportType || "");
+      fd.set("_subject", document.getElementById("_subject")?.value || "");
+      fd.set("_replyto", document.getElementById("_replyto")?.value || "");
+      fd.set("message", document.getElementById("message")?.value || payloadToPrettyText(payload));
+
+      const endpoint = enaForm.getAttribute("action");
+      const res = await fetch(endpoint, {
+        method: "POST",
+        body: fd,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (!res.ok){
+        let msg = "Submission failed. Please try again.";
+        try {
+          const data = await res.json();
+          if (data && data.errors && data.errors.length) msg = data.errors[0].message || msg;
+        } catch {}
+        throw new Error(msg);
+      }
+
+      window.location.href = redirectUrl;
+    }
+
+    // Navigation
+    enaBackBtn.addEventListener("click", () => {
+      if (enaStep > 1) enaSetStep(enaStep - 1);
+    });
+
+    enaNextBtn.addEventListener("click", async () => {
+      enaHideError();
+      hideSuccess();
+
+      if (enaStep === 1){
+        const err = validateStep1();
+        if (err) return enaShowError(err);
+        applyAssetType();
+        syncHiddenReportType();
+        return enaSetStep(2);
+      }
+
+      if (enaStep === 2){
+        const err = validateStep2();
+        if (err) return enaShowError(err);
+        return enaSetStep(3);
+      }
+
+      if (enaStep === 3){
+        applyAssetType();
+        syncHiddenReportType();
+        return enaSetStep(4);
+      }
+
+      if (enaStep === 4){
+        const err = validateStep4();
+        if (err) return enaShowError(err);
+
+        applyAssetType();
+        syncHiddenReportType();
+        const payload = collectPayload();
+
+        document.getElementById("_subject").value =
+          `ENA Request â€” ${payload.assetType || "Leisure"} â€” ${payload.reportType || "Request"} â€” ${payload.address || "New lead"}`;
+        document.getElementById("_replyto").value = payload.email || "";
+        document.getElementById("message").value = payloadToPrettyText(payload);
+
+        const rt = payload.reportType;
+
+        // Stripe path (Lite / Market Insights): send to Formspree via fetch, then redirect to Stripe
+        if (isStripeTier(rt)){
+          const url = STRIPE_CHECKOUT_URLS[rt];
+
+          if (!url || url.includes("REPLACE_WITH")){
+            return enaShowError("Stripe payment link is not configured yet. Please update STRIPE_CHECKOUT_URLS in the code.");
+          }
+
+          enaNextBtn.disabled = true;
+          enaBackBtn.disabled = true;
+          enaNextBtn.textContent = "Sendingâ€¦";
+
+          try{
+            await submitToFormspreeThenRedirect(payload, url);
+          } catch (e){
+            enaNextBtn.disabled = false;
+            enaBackBtn.disabled = false;
+            enaNextBtn.textContent = "Continue to payment";
+            return enaShowError(e.message || "Submission failed. Please try again.");
+          }
+          return;
+        }
+
+        // Non-Stripe path (Site Analysis / Site Analysis+): normal Formspree submit (as before)
+        enaNextBtn.disabled = true;
+        enaBackBtn.disabled = true;
+        enaNextBtn.textContent = "Submittingâ€¦";
+        enaForm.submit();
+      }
+    });
+
+    // Update on changes
+    if (assetTypeSelect){
+      assetTypeSelect.addEventListener("change", () => {
+        applyAssetType();
+        syncHiddenReportType();
+      });
+    }
+    if (reportTypeStep1){
+      reportTypeStep1.addEventListener("change", () => {
+        syncHiddenReportType();
+        enaUpdateSummary();
+      });
+    }
+    enaForm.addEventListener("input", enaUpdateSummary);
+    enaForm.addEventListener("change", enaUpdateSummary);
+
+    // --- Address Autocomplete (Mapbox) ---
+    const MAPBOX_ACCESS_TOKEN = "YOUR_MAPBOX_TOKEN_HERE";
+    const addressInput = document.getElementById("address");
+    const suggestBox = document.getElementById("addrSuggest");
+    let activeIndex = -1;
+    let lastResults = [];
+    let debounceTimer = null;
+
+    function closeSuggestions(){
+      if (!suggestBox) return;
+      suggestBox.style.display = "none";
+      suggestBox.innerHTML = "";
+      activeIndex = -1;
+      lastResults = [];
+    }
+
+    function renderSuggestions(features){
+      if (!suggestBox) return;
+      suggestBox.innerHTML = "";
+
+      if (!features || !features.length){
+        const empty = document.createElement("div");
+        empty.className = "addr-item";
+        empty.style.cursor = "default";
+        empty.innerHTML = `No matching addresses found <small>Try adding suburb / state</small>`;
+        suggestBox.appendChild(empty);
+        suggestBox.style.display = "block";
+        return;
+      }
+
+      features.forEach((f, idx) => {
+        const div = document.createElement("div");
+        div.className = "addr-item";
+        div.setAttribute("role", "option");
+        div.dataset.index = String(idx);
+
+        const place = f.place_name || f.text || "Address";
+        div.innerHTML = `${place}`;
+
+        div.addEventListener("mousedown", (e) => {
+          e.preventDefault();
+          selectSuggestion(idx);
+        });
+
+        suggestBox.appendChild(div);
+      });
+
+      suggestBox.style.display = "block";
+    }
+
+    function setActiveItem(idx){
+      if (!suggestBox) return;
+      const items = [...suggestBox.querySelectorAll(".addr-item")];
+      items.forEach(el => el.classList.remove("active"));
+      if (idx >= 0 && idx < items.length) items[idx].classList.add("active");
+    }
+
+    function selectSuggestion(idx){
+      const f = lastResults[idx];
+      if (!f) return;
+
+      addressInput.value = f.place_name || f.text || "";
+      enaUpdateSummary();
+
+      if (Array.isArray(f.center) && f.center.length === 2){
+        setHidden("siteLng", f.center[0]);
+        setHidden("siteLat", f.center[1]);
+      } else {
+        setHidden("siteLng", "");
+        setHidden("siteLat", "");
+      }
+      setHidden("sitePlaceId", f.id || "");
+
+      closeSuggestions();
+    }
+
+    async function fetchAddressSuggestions(query){
+      if (!MAPBOX_ACCESS_TOKEN){
+        console.warn("Mapbox token missing. Set MAPBOX_ACCESS_TOKEN to your pk. token.");
+        return [];
+      }
+
+      const url =
+        `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(query)}.json` +
+        `?access_token=${encodeURIComponent(MAPBOX_ACCESS_TOKEN)}` +
+        `&autocomplete=true&country=au&types=address,place&limit=8`;
+
+      const res = await fetch(url);
+      const text = await res.text();
+      let data;
+      try { data = JSON.parse(text); } catch { return []; }
+      if (!res.ok){ console.error("Mapbox error:", res.status, data); return []; }
+      return data.features || [];
+    }
+
+    if (addressInput){
+      addressInput.addEventListener("input", () => {
+        setHidden("siteLat", "");
+        setHidden("siteLng", "");
+        setHidden("sitePlaceId", "");
+
+        const q = addressInput.value.trim();
+        if (q.length < 2){
+          closeSuggestions();
+          return;
+        }
+
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(async () => {
+          try{
+            const features = await fetchAddressSuggestions(q);
+            lastResults = features;
+            renderSuggestions(features);
+          } catch (e){
+            console.error("Autocomplete fetch failed:", e);
+            closeSuggestions();
+          }
+        }, 200);
+      });
+
+      addressInput.addEventListener("keydown", (e) => {
+        if (!suggestBox || suggestBox.style.display !== "block") return;
+
+        const items = [...suggestBox.querySelectorAll(".addr-item")];
+        if (!items.length) return;
+
+        if (e.key === "ArrowDown"){
+          e.preventDefault();
+          activeIndex = Math.min(activeIndex + 1, items.length - 1);
+          setActiveItem(activeIndex);
+        } else if (e.key === "ArrowUp"){
+          e.preventDefault();
+          activeIndex = Math.max(activeIndex - 1, 0);
+          setActiveItem(activeIndex);
+        } else if (e.key === "Enter"){
+          if (activeIndex >= 0 && lastResults[activeIndex]){
+            e.preventDefault();
+            selectSuggestion(activeIndex);
+          }
+        } else if (e.key === "Escape"){
+          closeSuggestions();
+        }
+      });
+
+      addressInput.addEventListener("blur", () => {
+        setTimeout(closeSuggestions, 140);
+      });
+    }
+
+    document.addEventListener("click", (e) => {
+      if (suggestBox && addressInput && !suggestBox.contains(e.target) && e.target !== addressInput){
+        closeSuggestions();
+      }
+    });
+
+    // init
+    applyAssetType();
+    syncHiddenReportType();
+    enaSetStep(1);
+  </script>
+
+  <!-- ======== ENA MODAL OPEN/CLOSE + PREFILL ======== -->
+  <script>
+    (function () {
+      const modal = document.getElementById("enaModal");
+      if (!modal) return;
+
+      function openModal(reportType) {
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+
+        if (typeof enaSetStep === "function") enaSetStep(1);
+
+        const rt1 = document.getElementById("reportTypeStep1");
+        const rtHidden = document.getElementById("reportType");
+
+        if (reportType) {
+          const map = {
+            "Demand Insights": "Market Insights",
+            "Full Site Analytics": "Site Analytics",
+            "Site Analytics+": "Site Analytics+"
+          };
+          const mapped = map[reportType] || reportType;
+
+          if (rt1) rt1.value = mapped;
+          if (rtHidden) rtHidden.value = mapped;
+        }
+
+        if (typeof enaUpdateSummary === "function") enaUpdateSummary();
+
+        setTimeout(() => {
+          const sel = document.getElementById("assetTypeSelect");
+          if (sel) sel.focus();
+        }, 50);
+      }
+
+      function closeModal() {
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+
+      document.addEventListener("click", function (e) {
+        const btn = e.target.closest(".js-open-ena");
+        if (!btn) return;
+        e.preventDefault();
+        e.stopPropagation();
+        openModal(btn.getAttribute("data-report") || "");
+      });
+
+      modal.addEventListener("click", function (e) {
+        if (e.target.matches("[data-ena-close]")) closeModal();
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+      });
+    })();
+  </script>
+
+  <!-- Referral Popup -->
+  <div id="referralPopup" class="referral-popup">
+    <div class="referral-popup-content">
+      <span class="referral-close">&times;</span>
+      <h4>Know an investor or operator looking for a site?</h4>
+      <p>
+        Refer them to Leisure Analytics and receive a referral fee of at least $200
+        when a project proceeds. If you know someone exploring a new leisure,
+        fitness or hospitality location, weâ€™d value the introduction.
+      </p>
+      <a href="https://www.leisureanalytics.com.au/about.html#contact"
+        class="btn btn-dark mt-2"
+        onclick="event.preventDefault(); event.stopPropagation(); window.location.href=this.href;">
+        Submit a Referral
+      </a>
+    </div>
+  </div>
+
+  <style>
+    .referral-popup {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 380px;
+      background: #ffffff;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      border-radius: 12px;
+      z-index: 9999;
+      display: none;
+      font-family: 'Poppins', sans-serif;
+    }
+    .referral-popup-content { padding: 25px; }
+    .referral-popup h4 { font-size: 1.2rem; margin-bottom: 10px; font-weight: 600; }
+    .referral-popup p { font-size: 0.95rem; line-height: 1.6; color: #444; }
+    .referral-close { position: absolute; top: 12px; right: 15px; font-size: 22px; cursor: pointer; }
+    @media (max-width: 600px) {
+      .referral-popup { width: 90%; right: 5%; bottom: 20px; }
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (!localStorage.getItem("referralPopupShown")) {
+        setTimeout(function() {
+          const el = document.getElementById("referralPopup");
+          if (el) el.style.display = "block";
+        }, 3000);
+      }
+      const closeBtn = document.querySelector(".referral-close");
+      if (closeBtn) {
+        closeBtn.addEventListener("click", function() {
+          const el = document.getElementById("referralPopup");
+          if (el) el.style.display = "none";
+          localStorage.setItem("referralPopupShown", "true");
+        });
+      }
+    });
+  </script>
+
+  <!-- Structured Data Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Leisure Analytics Services & Research",
+    "description": "Paid analytical services plus free research insights for leisure-led property and operators.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Leisure Analytics"
+    }
+  }
+  </script>
+
+
+<!-- Sample Preview Modal -->
+<!-- Sample Preview Modal -->
+<div class="sample-modal" id="sampleModalBasic" aria-hidden="true">
+  <div class="sample-modal__backdrop" data-close="true"></div>
+
+  <div class="sample-modal__panel" role="dialog" aria-modal="true" aria-label="Sample report preview">
+    <div class="sample-modal__header">
+      <div class="sample-modal__title">
+        Sample Report Preview <span class="sample-modal__subtitle"></span>
+      </div>
+
+      <button class="sample-modal__close" type="button" data-close="true" aria-label="Close preview">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="sample-modal__body">
+      <!-- Scroll container for the rendered PDF pages -->
+      <div class="sample-viewer" id="sampleViewerBasic" data-pdf="sample-basic.pdf" data-max-pages="6">
+        <div class="sample-viewer__loading" id="sampleLoadingBasic">
+          <i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i>
+          Loading sampleâ€¦
+        </div>
+
+        <!-- pages 1â€“6 get injected here -->
+        <div class="sample-pages" id="samplePagesBasic"></div>
+      </div>
+
+      <!-- CTA overlay -->
+      <div class="sample-cta" id="sampleCtaBasic" aria-hidden="true">
+        <div class="sample-cta__card">
+          <div class="sample-cta__kicker">Want a report for your site?</div>
+          <div class="sample-cta__headline">Request your own decision-ready analysis today.</div>
+          <div class="sample-cta__text">
+            Weâ€™ll tailor it to your location, catchment, competitors, and market conditions â€” delivered fast.
+          </div>
+
+          <div class="sample-cta__actions">
+            <!-- THIS opens your ENA modal using your existing handler -->
+            <a href="#" class="btn btn-primary sample-cta__btn js-open-ena" data-report="Market Insights">
+              Order your tailored report
+            </a>
+
+            <button type="button" class="btn btn-light sample-cta__btn" data-close="true">
+              Close preview
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- PDF.js (CDN). If you need offline, Iâ€™ll tell you what files to download below. -->
+<!-- PDF.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+<script>
+(function () {
+  const btn = document.getElementById("btnViewSampleBasic");
+  const modal = document.getElementById("sampleModalBasic");
+  const viewer = document.getElementById("sampleViewerBasic");
+  const pagesHost = document.getElementById("samplePagesBasic");
+  const loading = document.getElementById("sampleLoadingBasic");
+  const cta = document.getElementById("sampleCtaBasic");
+
+  let hasLocked = false;
+  let lockPoint = null; // scroll position (bottom of page 6)
+
+  function openModal() {
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+
+    // reset state
+    hasLocked = false;
+    lockPoint = null;
+    viewer.classList.remove("scroll-locked");
+    cta.classList.remove("is-visible");
+    cta.setAttribute("aria-hidden", "true");
+    loading.style.display = "inline-flex";
+    viewer.scrollTop = 0;
+    pagesHost.innerHTML = "";
+
+    renderPagesUpToLimit();
+  }
+
+  function closeModal() {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+  }
+
+  function showCTAAndLock() {
+    if (hasLocked) return;
+    hasLocked = true;
+    viewer.classList.add("scroll-locked");
+    cta.classList.add("is-visible");
+    cta.setAttribute("aria-hidden", "false");
+  }
+
+  async function renderPagesUpToLimit() {
+    const pdfPath = viewer.getAttribute("data-pdf");
+    const maxPages = parseInt(viewer.getAttribute("data-max-pages") || "6", 10);
+
+    try {
+      pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+      const pdf = await pdfjsLib.getDocument(pdfPath).promise;
+      const renderCount = Math.min(maxPages, pdf.numPages);
+
+      // consistent scale based on container width
+      const maxWidth = Math.min(viewer.clientWidth - 36, 900);
+
+      for (let pageNum = 1; pageNum <= renderCount; pageNum++) {
+        const page = await pdf.getPage(pageNum);
+
+        const viewport1 = page.getViewport({ scale: 1 });
+        const scale = maxWidth / viewport1.width;
+        const viewport = page.getViewport({ scale });
+
+        const wrap = document.createElement("div");
+        wrap.className = "sample-page";
+        wrap.setAttribute("data-page", String(pageNum));
+
+        const canvas = document.createElement("canvas");
+        canvas.width = Math.floor(viewport.width);
+        canvas.height = Math.floor(viewport.height);
+
+        wrap.appendChild(canvas);
+        pagesHost.appendChild(wrap);
+
+        const ctx = canvas.getContext("2d");
+        await page.render({ canvasContext: ctx, viewport }).promise;
+      }
+
+      loading.style.display = "none";
+
+      // compute lockPoint at bottom of page 6 (or last rendered page)
+      const lockPageNum = renderCount;
+     const lockEl = pagesHost.querySelector('[data-page="' + lockPageNum + '"]');
+
+if (lockEl) {
+  const teaseRatio = 0.5; // halfway through last page
+  lockPoint = lockEl.offsetTop + (lockEl.offsetHeight * teaseRatio);
+}
+    } catch (err) {
+      console.error(err);
+      loading.innerHTML =
+        "Couldnâ€™t load the PDF sample. Check the filename/path and serve via http(s).";
+    }
+  }
+
+  function handleScroll() {
+    if (hasLocked || lockPoint == null) return;
+
+    const bottom = viewer.scrollTop + viewer.clientHeight;
+    const tolerance = 18;
+
+    if (bottom >= (lockPoint - tolerance)) {
+      showCTAAndLock();
+    }
+  }
+
+  // Close modal on backdrop/close buttons
+  modal.addEventListener("click", (e) => {
+    const t = e.target;
+
+    if (t && t.getAttribute && t.getAttribute("data-close") === "true") {
+      closeModal();
+      return;
+    }
+    if (t && t.closest && t.closest("[data-close='true']")) {
+      closeModal();
+      return;
+    }
+
+    // If they click the CTA order link, close preview first (ENA will open via your existing js-open-ena handler)
+    const orderLink = t && t.closest ? t.closest("#sampleCtaBasic .js-open-ena") : null;
+    if (orderLink) {
+      closeModal();
+      // Let the click continue so your ENA handler runs
+    }
+  });
+
+  // ESC closes
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+  });
+
+  viewer.addEventListener("scroll", handleScroll);
+
+  if (btn) btn.addEventListener("click", openModal);
+})();
+</script>
+
+</body>
+</html>

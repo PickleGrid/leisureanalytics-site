@@ -1,0 +1,881 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Essential Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Title -->
+  <title>Pickleball Site Potential Report</title>
+
+  <!-- SEO -->
+  <meta name="description"
+    content="A feasibility report covering catchment size, demographic demand drivers, service level benchmarks, competitive impacts, and market potential.">
+  <meta name="keywords"
+    content="pickleball Queensland, site advisory, location analysis, site research, feasibility, Leisure Analytics">
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico.png" type="image/x-icon">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+  <!-- CSS Framework -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="css/plugins/animate.css">
+  <link rel="stylesheet" href="css/plugins/slick.css">
+  <link rel="stylesheet" href="css/plugins/slick-theme.css">
+  <link rel="stylesheet" href="css/plugins/magnific-popup.css">
+
+  <!-- Icons -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Main Style -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Page styles -->
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+
+    .blog-hero {
+      min-height: 34vh;
+      display: flex;
+      align-items: center;
+      padding-top: 90px;
+      background: linear-gradient(180deg, rgba(0,0,0,.60), rgba(0,0,0,.30)), url('img/blog-images/find-pickleball-venues.jpg') center/cover no-repeat;
+    }
+
+    .blog-wrap { padding: 55px 0 80px; }
+
+    .post-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.08);
+      border: 1px solid rgba(0,0,0,.06);
+      overflow: hidden;
+    }
+
+    .post-body { padding: 26px; }
+
+    .post-title {
+      font-weight: 800;
+      font-size: 28px;
+      line-height: 1.25;
+      margin-bottom: 14px;
+      color: #1f1f1f;
+    }
+
+    .post-content p {
+      font-size: 15.5px;
+      line-height: 1.9;
+      color: #333;
+      margin-bottom: 16px;
+    }
+
+    .post-figure {
+      background: white;
+      padding: 18px;
+      border-radius: 14px;
+      margin: 18px 0 22px;
+      text-align: center;
+    }
+
+    .post-figure img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .callout {
+      border-left: 4px solid #222;
+      background: #f7f7f7;
+      padding: 14px 16px;
+      border-radius: 12px;
+      margin-top: 18px;
+      color:#333;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .post-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .post-actions a.btn {
+      border-radius: 10px;
+      font-weight: 700;
+      padding: 12px 14px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #f2f2f2;
+      font-size: 12px;
+      color: #333;
+      margin-right: 6px;
+      margin-top: 6px;
+    }
+
+    .content-col {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    /* ======= ENA FORM ======= */
+    .ena-wrap { margin-top: 26px; }
+    .ena-card{
+      border-radius: 16px;
+      border: 1px solid rgba(0,0,0,.08);
+      box-shadow: 0 12px 30px rgba(0,0,0,.06);
+      overflow: hidden;
+      background: #fff;
+    }
+    .ena-head{
+      padding: 18px 18px;
+      background: linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.02));
+      border-bottom: 1px solid rgba(0,0,0,.06);
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .ena-head h3{
+      margin:0;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: .2px;
+      color:#1f1f1f;
+    }
+    .ena-progress{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      margin-top: 4px;
+      color:#6b6b6b;
+      font-size: 12px;
+      white-space:nowrap;
+    }
+    .ena-dot{
+      width: 9px;height: 9px;border-radius: 999px;
+      border: 1px solid rgba(0,0,0,.18);
+      background: rgba(0,0,0,.05);
+    }
+    .ena-dot.active{ background:#1f1f1f; border-color: rgba(0,0,0,.3); }
+
+    .ena-body{ padding: 18px; }
+    .ena-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 16px;
+    }
+    @media (max-width: 860px){ .ena-grid{grid-template-columns:1fr} }
+
+    .ena-section{
+      border: 1px solid rgba(0,0,0,.08);
+      background: #fafafa;
+      border-radius: 14px;
+      padding: 14px;
+    }
+    .ena-section h4{
+      margin:0 0 10px 0;
+      font-size: 14px;
+      font-weight: 800;
+      color:#1f1f1f;
+    }
+    .ena-row{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    @media (max-width: 620px){ .ena-row{grid-template-columns:1fr} }
+
+    .ena-label{
+      display:block;
+      font-size: 12px;
+      color:#666;
+      margin: 10px 0 6px;
+    }
+    .ena-input, .ena-select, .ena-textarea{
+      width:100%;
+      border:1px solid rgba(0,0,0,.12);
+      border-radius: 12px;
+      padding: 10px 11px;
+      background:#fff;
+      color:#111;
+      outline:none;
+      font-size: 14px;
+    }
+    .ena-textarea{min-height: 90px; resize: vertical;}
+    .ena-input:focus, .ena-select:focus, .ena-textarea:focus{
+      border-color: rgba(0,0,0,.35);
+      box-shadow: 0 0 0 3px rgba(0,0,0,.08);
+    }
+    .ena-hint{ font-size: 12px; color:#777; margin-top: 6px; line-height: 1.45; }
+
+    .ena-summary{
+      position: sticky;
+      top: 14px;
+    }
+    @media (max-width: 860px){ .ena-summary{position:static} }
+    .ena-kv{
+      display:grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      padding: 10px 0;
+      border-bottom: 1px dashed rgba(0,0,0,.16);
+      font-size: 13px;
+      color:#666;
+    }
+    .ena-kv:last-child{border-bottom:none}
+    .ena-kv strong{ color:#111; font-weight: 700; }
+
+    .ena-actions{
+      padding: 16px 18px;
+      border-top: 1px solid rgba(0,0,0,.06);
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      background: #fbfbfb;
+    }
+    .ena-btn{
+      border:none;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-weight: 800;
+      font-size: 14px;
+      cursor:pointer;
+    }
+    .ena-btn.primary{ background:#1f1f1f; color:#fff; }
+    .ena-btn.secondary{
+      background:#fff;
+      border: 1px solid rgba(0,0,0,.14);
+      color:#111;
+      font-weight: 700;
+    }
+    .ena-error{
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(217,162,156,.20);
+      border: 1px solid rgba(217,162,156,.55);
+      color:#111;
+      font-size: 13px;
+      display:none;
+    }
+    .ena-success{
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(46, 204, 113, .12);
+      border: 1px solid rgba(46, 204, 113, .45);
+      color:#111;
+      font-size: 13px;
+      display:none;
+    }
+
+    /* ======= Address autocomplete dropdown ======= */
+    .addr-wrap { position: relative; }
+    .addr-suggest {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(100% + 6px);
+      z-index: 9999;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.10);
+      overflow: hidden;
+      display: none;
+      max-height: 260px;
+      overflow-y: auto;
+    }
+    .addr-item {
+      padding: 10px 11px;
+      font-size: 14px;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(0,0,0,.06);
+    }
+    .addr-item:last-child { border-bottom: none; }
+    .addr-item:hover, .addr-item.active { background: rgba(0,0,0,.05); }
+    .addr-item small {
+      display:block;
+      color:#666;
+      font-size:12px;
+      margin-top:2px;
+      line-height:1.3;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="se-pre-con"></div>
+
+  <!-- ======== Start Navbar ======== -->
+  <nav class="navbar navbar-expand-lg navbar-light nav-research fixed-top">
+    <div class="container">
+      <a href="index.html">
+        <img src="img/logo.png" style="height: 70px;" alt="Leisure Analytics logo">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="window.location.href='index.html#our-services'">Our Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="research.html">Research</a>
+          </li>
+        </ul>
+
+        <a href="https://calendly.com/sam-leisureanalytics" class="btn-1">
+          <i aria-hidden="true" style="margin-right:6px; color:#28a745;"></i>Free Consultation
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!-- ======== End Navbar ======== -->
+
+  <!-- ======== Hero ======== -->
+  <section class="blog-hero text-white">
+    <div class="container text-center">
+      <h1 style="font-weight: 800; letter-spacing: .2px; margin-bottom: 8px;">
+        Pickleball Site Potential Report
+      </h1>
+      <p style="max-width: 860px; margin: 0 auto; opacity: .95;"></p>
+    </div>
+  </section>
+
+  <!-- ======== Post ======== -->
+  <section class="blog-wrap">
+    <div class="container">
+      <div class="content-col">
+        <div class="post-card">
+          <div class="post-body">
+
+            <div class="post-title">An overview of our site assessment reports</div>
+
+            <div>
+              <span class="tag">Pickleball Site</span>
+              <span class="tag">Analysis</span>
+              <span class="tag">Research</span>
+            </div>
+
+            <div class="post-figure">
+              <img src="img/blog-images/pickleball-site-analysis.jpg" alt="Pickleball site research & advisory">
+            </div>
+
+            <div class="post-content">
+              <p>
+                This advisory provides an independent, data driven assessment of site potential for pickleball facilities, focused on
+                understanding where demand exists, how effectively it is currently serviced, and what level of development is
+                supportable.
+              </p>
+
+              <p>
+                The analysis is underpinned by a proprietary, purpose built pickleball database. This enables
+                assessment of supply side variables that are not otherwise observable through standard pickleball mapping tools,
+                including effective court availability, service capacity, and competitive intensity.
+              </p>
+
+              <p>
+                Market demand is assessed within realistic drive time catchments and considered alongside demographic demand
+                drivers and service level benchmarks to identify areas of undersupply, emerging opportunity, or capacity pressure.
+                Rather than relying solely on headline participation rates, the advisory translates demand into practical,
+                site specific implications for facility scale and market positioning.
+              </p>
+
+              <div class="callout">
+                <b>Have a new pickleball club site in mind? Share your details below and weâ€™ll email you to confirm next steps and pricing for an Economic Needs Assessment.</b>
+              </div>
+            </div>
+
+            <!-- ======== ENA FORM ======== -->
+         
+
+            <div class="post-actions">
+              <a href="research.html" class="btn btn-dark">
+                <i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back to Research
+              </a>
+              <a href="https://calendly.com/sam-leisureanalytics" class="btn btn-outline-dark">
+                Enquire <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== Footer ======== -->
+  <footer class="footer">
+    <div class="container text-center">
+      <div class="content">
+        <a href="index.html">
+          <img src="img/Footer-logo.svg" alt="Logo" style="height: 46px; width: 50px;">
+        </a>
+        <p>Â© 2025 Leisure Analytics</p>
+
+        <div class="footer-links">
+          <a class="nav-link small-link" href="privacy-policy.html">Privacy Policy</a>
+          <span class="dot">â€¢</span>
+          <a class="nav-link small-link" href="terms.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======== Java Script ======== -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/plugins/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/plugins/slick.min.js"></script>
+  <script src="js/plugins/wow.min.js"></script>
+  <script src="js/plugins/magnific-popup.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- ======== ENA SCRIPT ======== -->
+  <script>
+    // Stepper
+    const enaForm = document.getElementById("enaForm");
+    const enaSteps = [...document.querySelectorAll("[data-ena-step]")];
+    const enaStepLabel = document.getElementById("enaStepLabel");
+    const enaDot1 = document.getElementById("enaDot1");
+    const enaDot2 = document.getElementById("enaDot2");
+    const enaDot3 = document.getElementById("enaDot3");
+    const enaErrorBox = document.getElementById("enaErrorBox");
+    const enaSuccessBox = document.getElementById("enaSuccessBox");
+    const enaBackBtn = document.getElementById("enaBackBtn");
+    const enaNextBtn = document.getElementById("enaNextBtn");
+    let enaStep = 1;
+
+    function enaSetStep(n){
+      enaStep = n;
+      enaSteps.forEach(s => s.style.display = (Number(s.dataset.enaStep) === enaStep) ? "block" : "none");
+      enaDot1.classList.toggle("active", enaStep >= 1);
+      enaDot2.classList.toggle("active", enaStep >= 2);
+      enaDot3.classList.toggle("active", enaStep >= 3);
+      enaStepLabel.textContent = `Step ${enaStep} of 3`;
+      enaBackBtn.style.visibility = (enaStep === 1) ? "hidden" : "visible";
+      enaNextBtn.textContent = (enaStep === 3) ? "Submit request" : "Next";
+      enaHideError();
+      hideSuccess();
+      enaUpdateSummary();
+    }
+
+    function enaShowError(msg){
+      enaErrorBox.textContent = msg;
+      enaErrorBox.style.display = "block";
+      enaErrorBox.scrollIntoView({behavior:"smooth", block:"nearest"});
+    }
+    function enaHideError(){
+      enaErrorBox.style.display = "none";
+      enaErrorBox.textContent = "";
+    }
+    function showSuccess(){ enaSuccessBox.style.display = "block"; }
+    function hideSuccess(){ enaSuccessBox.style.display = "none"; }
+
+    function v(id){
+      const el = document.getElementById(id);
+      return (el ? el.value : "").trim();
+    }
+    function setHidden(id, val){ const el = document.getElementById(id); if (el) el.value = val ?? ""; }
+
+    function proposalText(){
+      const courts = v("courtCount");
+      const venueType = v("venueType");
+      const surface = v("surface");
+      const gfa = v("gfa");
+      const parts = [];
+      if (courts) parts.push(`${courts} courts`);
+      if (venueType) parts.push(venueType);
+      if (surface) parts.push(surface);
+      if (gfa) parts.push(`${gfa} sqm GFA`);
+      return parts.length ? parts.join(" â€¢ ") : "â€”";
+    }
+
+    function enaUpdateSummary(){
+      document.getElementById("sumAddress").textContent = v("address") || "â€”";
+      document.getElementById("sumReportType").textContent = v("reportType") || "â€”";
+      document.getElementById("sumProposal").textContent = proposalText();
+      document.getElementById("sumEmail").textContent = v("email") || "â€”";
+    }
+
+    function validateStep1(){
+      if (!v("address")) return "Please enter the site address.";
+      return null;
+    }
+
+    // âœ… FIXED: Use browser validation + trim
+    function validateStep3(){
+      const reportType = v("reportType");
+      const clientType = v("clientType");
+      const emailEl = document.getElementById("email");
+      const email = (emailEl?.value || "").trim();
+
+      if (!reportType) return "Please select a report type (Full Site Analysis, Demand Insights, or Basic).";
+      if (!clientType) return "Please select who you are (operator, developer, investor, etc.).";
+      if (!email) return "Please enter an email for delivery.";
+
+      // Use built-in HTML5 email validation
+      if (emailEl && !emailEl.checkValidity()) return "Please enter a valid email address.";
+
+      // Write back trimmed email so trailing spaces never cause issues
+      if (emailEl) emailEl.value = email;
+
+      return null;
+    }
+
+    function payloadToPrettyText(payload){
+      const order = [
+        ["Asset Type", payload.assetType],
+        ["Site Address", payload.address],
+        ["Site Lat", payload.siteLat],
+        ["Site Lng", payload.siteLng],
+        ["Place ID", payload.sitePlaceId],
+        ["Opening / decision timeframe", payload.priorityWindow],
+        ["Report Type", payload.reportType],
+        ["Proposed number of courts", payload.courtCount],
+        ["Venue format", payload.venueType],
+        ["Indoor / outdoor", payload.surface],
+        ["Proposed GFA (sqm)", payload.gfa],
+        ["Ancillary uses", payload.ancillary],
+        ["Pricing tier", payload.pricingTier],
+        ["Client type", payload.clientType],
+        ["Delivery email", payload.email],
+        ["Company", payload.company],
+        ["Notes", payload.notes],
+        ["Submitted (Brisbane)", payload.submittedBrisbane]
+      ];
+
+      return order
+        .filter(([,val]) => val !== "" && val !== null && typeof val !== "undefined")
+        .map(([k,val]) => `${k}: ${val}`)
+        .join("\n");
+    }
+
+    function collectPayload(){
+      return {
+        assetType: "Pickleball venue",
+        address: v("address"),
+        siteLat: v("siteLat"),
+        siteLng: v("siteLng"),
+        sitePlaceId: v("sitePlaceId"),
+        priorityWindow: v("priorityWindow"),
+        reportType: v("reportType"),
+        courtCount: v("courtCount"),
+        venueType: v("venueType"),
+        surface: v("surface"),
+        gfa: v("gfa"),
+        ancillary: v("ancillary"),
+        pricingTier: v("pricingTier"),
+        clientType: v("clientType"),
+        email: v("email"),
+        company: v("company"),
+        notes: v("notes"),
+        submittedBrisbane: new Date().toLocaleString("en-AU", { timeZone: "Australia/Brisbane" })
+      };
+    }
+
+    // Buttons
+    enaBackBtn.addEventListener("click", () => {
+      if (enaStep > 1) enaSetStep(enaStep - 1);
+    });
+
+    enaNextBtn.addEventListener("click", () => {
+      enaHideError();
+      hideSuccess();
+
+      if (enaStep === 1){
+        const err = validateStep1();
+        if (err) return enaShowError(err);
+        return enaSetStep(2);
+      }
+
+      if (enaStep === 2){
+        return enaSetStep(3);
+      }
+
+      if (enaStep === 3){
+        const err = validateStep3();
+        if (err) return enaShowError(err);
+
+        const payload = collectPayload();
+
+        // Fill helper fields for Formspree email formatting
+        document.getElementById("_subject").value =
+          `ENA Request â€” ${payload.reportType || "Pickleball"} â€” ${payload.address || "New lead"}`;
+        document.getElementById("_replyto").value = payload.email || "";
+        document.getElementById("message").value = payloadToPrettyText(payload);
+
+        // Submit the real HTML form to Formspree
+        enaNextBtn.disabled = true;
+        enaBackBtn.disabled = true;
+        enaNextBtn.textContent = "Submittingâ€¦";
+
+        enaForm.submit();
+      }
+    });
+
+    enaForm.addEventListener("input", enaUpdateSummary);
+    enaForm.addEventListener("change", enaUpdateSummary);
+
+    // --- Address Autocomplete (Mapbox) ---
+    const MAPBOX_ACCESS_TOKEN = "YOUR_MAPBOX_TOKEN_HERE";
+    const addressInput = document.getElementById("address");
+    const suggestBox = document.getElementById("addrSuggest");
+    let activeIndex = -1;
+    let lastResults = [];
+    let debounceTimer = null;
+
+    function closeSuggestions(){
+      suggestBox.style.display = "none";
+      suggestBox.innerHTML = "";
+      activeIndex = -1;
+      lastResults = [];
+    }
+
+    function renderSuggestions(features){
+      suggestBox.innerHTML = "";
+      if (!features || !features.length){
+        const empty = document.createElement("div");
+        empty.className = "addr-item";
+        empty.style.cursor = "default";
+        empty.innerHTML = `No matching addresses found <small>Try adding suburb / state</small>`;
+        suggestBox.appendChild(empty);
+        suggestBox.style.display = "block";
+        return;
+      }
+
+      features.forEach((f, idx) => {
+        const div = document.createElement("div");
+        div.className = "addr-item";
+        div.setAttribute("role", "option");
+        div.dataset.index = String(idx);
+
+        const place = f.place_name || f.text || "Address";
+        div.innerHTML = `${place}`;
+
+        div.addEventListener("mousedown", (e) => {
+          e.preventDefault();
+          selectSuggestion(idx);
+        });
+
+        suggestBox.appendChild(div);
+      });
+
+      suggestBox.style.display = "block";
+    }
+
+    function setActiveItem(idx){
+      const items = [...suggestBox.querySelectorAll(".addr-item")];
+      items.forEach(el => el.classList.remove("active"));
+      if (idx >= 0 && idx < items.length) items[idx].classList.add("active");
+    }
+
+    function selectSuggestion(idx){
+      const f = lastResults[idx];
+      if (!f) return;
+
+      addressInput.value = f.place_name || f.text || "";
+      enaUpdateSummary();
+
+      if (Array.isArray(f.center) && f.center.length === 2){
+        setHidden("siteLng", f.center[0]);
+        setHidden("siteLat", f.center[1]);
+      } else {
+        setHidden("siteLng", "");
+        setHidden("siteLat", "");
+      }
+      setHidden("sitePlaceId", f.id || "");
+
+      closeSuggestions();
+    }
+
+    async function fetchAddressSuggestions(query){
+      if (!MAPBOX_ACCESS_TOKEN){
+        console.warn("Mapbox token missing. Set MAPBOX_ACCESS_TOKEN to your pk. token.");
+        return [];
+      }
+
+      const url =
+        `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(query)}.json` +
+        `?access_token=${encodeURIComponent(MAPBOX_ACCESS_TOKEN)}` +
+        `&autocomplete=true&country=au&types=address,place&limit=8`;
+
+      const res = await fetch(url);
+      const text = await res.text();
+      let data;
+      try { data = JSON.parse(text); } catch { return []; }
+      if (!res.ok){ console.error("Mapbox error:", res.status, data); return []; }
+      return data.features || [];
+    }
+
+    addressInput.addEventListener("input", () => {
+      setHidden("siteLat", "");
+      setHidden("siteLng", "");
+      setHidden("sitePlaceId", "");
+
+      const q = addressInput.value.trim();
+      if (q.length < 2){
+        closeSuggestions();
+        return;
+      }
+
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(async () => {
+        try{
+          const features = await fetchAddressSuggestions(q);
+          lastResults = features;
+          renderSuggestions(features);
+        } catch (e){
+          console.error("Autocomplete fetch failed:", e);
+          closeSuggestions();
+        }
+      }, 200);
+    });
+
+    addressInput.addEventListener("keydown", (e) => {
+      if (suggestBox.style.display !== "block") return;
+
+      const items = [...suggestBox.querySelectorAll(".addr-item")];
+      if (!items.length) return;
+
+      if (e.key === "ArrowDown"){
+        e.preventDefault();
+        activeIndex = Math.min(activeIndex + 1, items.length - 1);
+        setActiveItem(activeIndex);
+      } else if (e.key === "ArrowUp"){
+        e.preventDefault();
+        activeIndex = Math.max(activeIndex - 1, 0);
+        setActiveItem(activeIndex);
+      } else if (e.key === "Enter"){
+        if (activeIndex >= 0 && lastResults[activeIndex]){
+          e.preventDefault();
+          selectSuggestion(activeIndex);
+        }
+      } else if (e.key === "Escape"){
+        closeSuggestions();
+      }
+    });
+
+    addressInput.addEventListener("blur", () => {
+      setTimeout(closeSuggestions, 140);
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!suggestBox.contains(e.target) && e.target !== addressInput){
+        closeSuggestions();
+      }
+    });
+
+    // Init
+    enaSetStep(1);
+  </script>
+<!-- Referral Popup -->
+<!-- Referral Popup -->
+<div id="referralPopup" class="referral-popup">
+  <div class="referral-popup-content">
+    <span class="referral-close">&times;</span>
+    <h4>Know an investor or operator looking for a site?</h4>
+    <p>
+      Refer them to Leisure Analytics and receive a referral fee of at least $200
+      when a project proceeds. If you know someone exploring a new leisure,
+      fitness or hospitality location, weâ€™d value the introduction.
+    </p>
+    <a href="https://www.leisureanalytics.com.au/about.html#contact"
+   class="btn btn-dark mt-2"
+   onclick="event.preventDefault(); event.stopPropagation(); window.location.href=this.href;">
+   Submit a Referral
+</a>
+  </div>
+</div>
+
+<style>
+.referral-popup {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 380px;
+  background: #ffffff;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  z-index: 9999;
+  display: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.referral-popup-content {
+  padding: 25px;
+}
+
+.referral-popup h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.referral-popup p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.referral-close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .referral-popup {
+    width: 90%;
+    right: 5%;
+    bottom: 20px;
+  }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  if (!localStorage.getItem("referralPopupShown")) {
+    setTimeout(function() {
+      document.getElementById("referralPopup").style.display = "block";
+    }, 3000);
+  }
+
+  document.querySelector(".referral-close").addEventListener("click", function() {
+    document.getElementById("referralPopup").style.display = "none";
+    localStorage.setItem("referralPopupShown", "true");
+  });
+
+});
+</script>
+</body>
+</html>
