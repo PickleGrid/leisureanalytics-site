@@ -408,7 +408,7 @@
               </p>
 
               <div class="callout">
-                <b>Have a new pickleball club site in mind? Share your details below and weâ€™ll email you to confirm next steps and pricing for an Economic Needs Assessment.</b>
+                <b>Have a new pickleball club site in mind? Share your details below and we’ll email you to confirm next steps and pricing for an Economic Needs Assessment.</b>
               </div>
             </div>
 
@@ -441,7 +441,7 @@
 
         <div class="footer-links">
           <a class="nav-link small-link" href="privacy-policy.html">Privacy Policy</a>
-          <span class="dot">â€¢</span>
+          <span class="dot">•</span>
           <a class="nav-link small-link" href="terms.html">Terms &amp; Conditions</a>
         </div>
       </div>
@@ -514,14 +514,14 @@
       if (venueType) parts.push(venueType);
       if (surface) parts.push(surface);
       if (gfa) parts.push(`${gfa} sqm GFA`);
-      return parts.length ? parts.join(" â€¢ ") : "â€”";
+      return parts.length ? parts.join(" • ") : "—";
     }
 
     function enaUpdateSummary(){
-      document.getElementById("sumAddress").textContent = v("address") || "â€”";
-      document.getElementById("sumReportType").textContent = v("reportType") || "â€”";
+      document.getElementById("sumAddress").textContent = v("address") || "—";
+      document.getElementById("sumReportType").textContent = v("reportType") || "—";
       document.getElementById("sumProposal").textContent = proposalText();
-      document.getElementById("sumEmail").textContent = v("email") || "â€”";
+      document.getElementById("sumEmail").textContent = v("email") || "—";
     }
 
     function validateStep1(){
@@ -627,14 +627,14 @@
 
         // Fill helper fields for Formspree email formatting
         document.getElementById("_subject").value =
-          `ENA Request â€” ${payload.reportType || "Pickleball"} â€” ${payload.address || "New lead"}`;
+          `ENA Request — ${payload.reportType || "Pickleball"} — ${payload.address || "New lead"}`;
         document.getElementById("_replyto").value = payload.email || "";
         document.getElementById("message").value = payloadToPrettyText(payload);
 
         // Submit the real HTML form to Formspree
         enaNextBtn.disabled = true;
         enaBackBtn.disabled = true;
-        enaNextBtn.textContent = "Submittingâ€¦";
+        enaNextBtn.textContent = "Submitting…";
 
         enaForm.submit();
       }
@@ -804,7 +804,7 @@
     <p>
       Refer them to Leisure Analytics and receive a referral fee of at least $200
       when a project proceeds. If you know someone exploring a new leisure,
-      fitness or hospitality location, weâ€™d value the introduction.
+      fitness or hospitality location, we’d value the introduction.
     </p>
     <a href="https://www.leisureanalytics.com.au/about.html#contact"
    class="btn btn-dark mt-2"
