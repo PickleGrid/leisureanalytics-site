@@ -1,0 +1,1 @@
+﻿const fs = require("fs"); const files = ["pickleball-site-advisory-research.html", "research.html"]; files.forEach(f => { let c = fs.readFileSync(f, "utf8"); c = c.split(String.fromCharCode(226,8364,8220)).join("\u201c"); fs.writeFileSync(f, c); console.log("fixed:", f); });
